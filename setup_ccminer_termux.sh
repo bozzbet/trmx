@@ -37,7 +37,7 @@ proot-distro login ubuntu --shared-tmp -- bash -c "
 "
 EOF
 
-chmod +x ~/.termux/boot/autostart_ccminer.sh
+chmod +x ~/.termux/boot/ast_ccminer.sh
 
 echo "Autostart installed!!!"
 echo "Reboot your phone to test the CCminer auto-start."

@@ -23,7 +23,7 @@ echo "[[ <<Setting up Termux:Boot CCminer Autostart Script...>> ]]"
 
 mkdir -p ~/.termux/boot
 
-cat > ~/.termux/boot/autostart_ccminer.sh << 'EOF'
+cat > ~/.termux/boot/ast_ccminer.sh << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Keep CPU awake

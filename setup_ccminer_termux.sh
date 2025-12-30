@@ -13,7 +13,8 @@ proot-distro install ubuntu || true
 
 echo "[Setup 4 of 4]: Running your Ubuntu installer..."
 proot-distro login ubuntu -- /bin/sh -c "
-    wget -O /root/install_termux.sh https://raw.githubusercontent.com/bozzbet/rvsc/mcvrsc/install_termux.sh &&
+    apt-get update &&
+    apt-get install -y wget && wget -O /root/install_termux.sh https://raw.githubusercontent.com/bozzbet/rvsc/mcvrsc/install_termux.sh &&
     chmod +x /root/install_termux.sh &&
     /root/install_termux.sh
 "

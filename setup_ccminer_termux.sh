@@ -8,22 +8,23 @@ pkg update -y
 echo "[Setup 2 of 4]: Installing proot-distro..."
 pkg install -y proot-distro
 
-echo "[Setup 3 of 4] Installing Ubuntu..."
+echo "[Setup 3 of 4]: Installing Ubuntu..."
 proot-distro install ubuntu || true
 
 echo "[Setup 4 of 4]: Running your Ubuntu installer..."
 proot-distro login ubuntu -- /bin/sh -c "
     apt-get update &&
-    apt-get install -y wget && wget -O /root/install_termux.sh https://raw.githubusercontent.com/bozzbet/rvsc/mcvrsc/install_termux.sh &&
+    apt-get install -y wget &&
+    wget -O /root/install_termux.sh https://raw.githubusercontent.com/bozzbet/rvsc/mcvrsc/install_termux.sh &&
     chmod +x /root/install_termux.sh &&
     /root/install_termux.sh
 "
+
 echo "------------------ "
-echo "[[ <<Setting up Termux:Boot CCminer Autostart Script...>> ]]"
+echo "[[ <<Creating CCminer launcher script in Termux>> ]]"
 
-mkdir -p ~/.termux/boot
-
-cat > ~/.termux/boot/ast_ccminer.sh << 'EOF'
+# Create the script in Termux home instead of ~/.termux/boot
+cat > ~/ast_ccminer.sh << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Keep CPU awake
@@ -37,8 +38,9 @@ proot-distro login ubuntu --shared-tmp -- bash -c "
 "
 EOF
 
-chmod +x ~/.termux/boot/ast_ccminer.sh
+chmod +x ~/ast_ccminer.sh
 
-echo "Autostart installed!!!"
-echo "Reboot your phone to test the CCminer auto-start."
+echo "Launcher script created at: ~/ast_ccminer.sh"
+echo "Run it manually anytime using:"
+echo "    bash ~/ast_ccminer.sh"
 echo "------------------ "

@@ -33,6 +33,7 @@ termux-wake-lock
 proot-distro login ubuntu --shared-tmp -- bash -c "
     cd ~/ccminer
     ./start.sh
+    screen -x CCminer
 "
 EOF
 

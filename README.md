@@ -22,7 +22,7 @@ The script will install the following:
 ## Post-Install Setup 
 Once the installation is DONE, update the `config.json` to your own miner's setting.
 
-In Termux Terminal, execure the command to login to Ubuntu:
+1. In Termux Terminal, execute the command to login to Ubuntu:
 ```bash
 proot-distro login ubuntu
 ```
@@ -31,7 +31,7 @@ Inside `ubuntu`, the `ccminer` folder is saved in the `home` directory.
 cd ~/ccminer
 nano config.json
 ```
-Update the mining pools and your miner identity. 
+2. Update the mining pools and your miner identity. 
 - <pool_name_1> and <pool_name_2>
 - <pool_1> and <pool_2>
 - <wallet_address>.<miner_name>

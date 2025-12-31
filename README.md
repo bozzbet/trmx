@@ -10,7 +10,7 @@ Option 1: Run this command in Termux shell:
 ```bash
 curl -s https://raw.githubusercontent.com/bozzbet/trmx/main/setup_ccminer_termux.sh | sh
 ```
-Option 2: QR Code ***To be updated/added***
+Option 2: QR Code >>>To be updated/added<<<
  Using the camera, scan the QR code to install.
 
 The script will install the following:

@@ -35,8 +35,9 @@ Update the mining pools and your miner identity.
 - <pool_name_1> and <pool_name_2>
 - <pool_1> and <pool_2>
 - <wallet_address>.<miner_name>
-- "api-allow"= <to_your_IP_range>
-
+- "api-allow": <to_your_IP_range>
+- "threads": <to_your_miners_desired_#_of_threads>
+  
 Template: `config.json` file.
 ```bash
 {

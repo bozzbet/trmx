@@ -44,3 +44,6 @@ echo "Launcher script created at: ~/ast_ccminer.sh"
 echo "Run it manually anytime using:"
 echo "    bash ~/ast_ccminer.sh"
 echo "------------------ "
+
+echo "[*] Running ast_ccminer.sh..."
+bash ~/ast_ccminer.sh

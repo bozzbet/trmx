@@ -10,7 +10,13 @@ Run this command in Termux shell:
 ```bash
 curl -s https://raw.githubusercontent.com/bozzbet/trmx/main/setup_ccminer_termux.sh | sh
 ```
-The command will install Ubuntu proot-distro in Termux, install the required packges, setup the ccminer and the startup script.
+The command will installs the following:
+- Ubuntu proot-distro in Termux
+- Applies `wake-lock` on termux instance (this will keep Termux and the ccminer running)
+- Required packages on Termux and the Ubuntu proot-distro
+- Setup the ccminer
+- Startup script
+  
 Once the installation is done, you can execute the startup script from the Termux prompt.
 ```bash
   ./ast_ccminer.sh

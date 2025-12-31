@@ -19,7 +19,55 @@ The script will install the following:
 - Setup the ccminer (in ubuntu)'
 - Miner's Startup script, with `wake-lock` on Termux instance, in Termux home directory.
   
-Once the installation is done, you can execute the startup script from the Termux prompt.
+## Post-Install Setup 
+Once the installation is DONE, update the `config.json` to your own miner's setup.
+
+In Termux Terminal, execure the command to login to Ubuntu:
+```bash
+proot-distro login ubuntu
+```
+Inside `ubuntu`, the `ccminer` folder is setup in the `home` directory.
+```bash
+cd ~/ccminer
+nano config.json
+```
+Update the mining pools and your miner identity. 
+- <pool_name_1> and <pool_name_2>
+- <pool_1> and <pool_2>
+- <wallet_address>.<miner_name>
+- "api-allow"= <to_your_IP_range>
+
+Template: `config.json` file.
+```bash
+{
+	"pools":[
+	{
+		"name": "<pool_name_1>",
+        "url": "stratum+tcp://<pool_1>:<port>",
+		"timeout": 150,
+		"disabled": 0
+	},
+	{
+		"name": "<pool_name_2>",
+        "url": "stratum+tcp://<pool_2>:<port>",
+		"timeout": 60,
+		"time-limit": 600,
+		"disabled": 0
+	}],
+	"user": "<wallet_address>.<miner_name>",
+	"algo": "verus",
+	"threads": 8,
+	"cpu-priority": 1,
+	"retry-pause": 5,
+	"api-allow": "192.168.0.0/16",
+	"api-bind": "0.0.0.0:4068"
+}
+```
+Save and Exit `nano` with `CTL+X` + 'Y' and <Enter>.
+Type `exit` to go back to Termux.
+
+## Start the Miner 
+Execute the startup script from the Termux prompt.
 ```bash
   ./ast_ccminer.sh
 ```

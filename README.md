@@ -1,21 +1,23 @@
 # Verus Miner Quick Installer for Mobile Phone (Android)
-This is a sinngle command to setup the ccminer in Mobile Phone.
+This is a single command to setup the miner in Mobile Phone.
 
 ## Pre-requesite
 1. Termux is installed in the Mobile Phone.
 2. Termux app is set to run 'UNRESTRICTED" in the background.
 
 ## Installation and Usage:
-Run this command in Termux shell:
+Option 1: Run this command in Termux shell:
 ```bash
 curl -s https://raw.githubusercontent.com/bozzbet/trmx/main/setup_ccminer_termux.sh | sh
 ```
-The command will installs the following:
-- Ubuntu proot-distro in Termux
-- Applies `wake-lock` on termux instance (this will keep Termux and the ccminer running)
+Option 2: QR Code (To be update/added...)
+Using phone's camera, scan the QR code to install.
+
+The script will install the following:
+- Ubuntu proot-distro in Termux'
 - Required packages on Termux and the Ubuntu proot-distro
-- Setup the ccminer
-- Startup script
+- Setup the ccminer (in ubuntu)'
+- Miner's Startup script, with `wake-lock` on Termux instance, in Termux home directory.
   
 Once the installation is done, you can execute the startup script from the Termux prompt.
 ```bash

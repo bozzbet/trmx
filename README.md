@@ -1,11 +1,11 @@
-#Verus Miner Quick Installer for Mobile Phone (Android)
+# Verus Miner Quick Installer for Mobile Phone (Android)
 This is a sinngle command to setup the ccminer in Mobile Phone.
 
-##Pre-requesite
+## Pre-requesite
 1. Termux is installed in the Mobile Phone.
 2. Termux app is set to run in the baclground.
 
-##Installation and Usage:
+## Installation and Usage:
 Run this command in Termux shell:
 ```bash
 curl -s https://raw.githubusercontent.com/bozzbet/trmx/main/setup_ccminer_termux.sh | sh

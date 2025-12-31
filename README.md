@@ -20,13 +20,13 @@ The script will install the following:
 - Miner's Startup script, with `wake-lock` on Termux instance, in Termux home directory.
   
 ## Post-Install Setup 
-Once the installation is DONE, update the `config.json` to your own miner's setup.
+Once the installation is DONE, update the `config.json` to your own miner's setting.
 
 In Termux Terminal, execure the command to login to Ubuntu:
 ```bash
 proot-distro login ubuntu
 ```
-Inside `ubuntu`, the `ccminer` folder is setup in the `home` directory.
+Inside `ubuntu`, the `ccminer` folder is saved in the `home` directory.
 ```bash
 cd ~/ccminer
 nano config.json
@@ -63,11 +63,11 @@ Template: `config.json` file.
 	"api-bind": "0.0.0.0:4068"
 }
 ```
-Save and Exit `nano` with `CTL+X` + 'Y' and <Enter>.
-Type `exit` to go back to Termux.
+Save and Exit `nano` with `CTL+X` + `'Y'` and hit `<Enter>` key.
+Type `exit` to go back to Termux terminal.
 
 ## Start the Miner 
-Execute the startup script from the Termux prompt.
+Execute the startup script from the Termux prompt.  The script is in the `home` directory
 ```bash
   ./ast_ccminer.sh
 ```

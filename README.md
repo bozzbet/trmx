@@ -3,7 +3,7 @@ This is a sinngle command to setup the ccminer in Mobile Phone.
 
 ## Pre-requesite
 1. Termux is installed in the Mobile Phone.
-2. Termux app is set to run in the baclground.
+2. Termux app is set to run 'UNRESTRICTED" in the background.
 
 ## Installation and Usage:
 Run this command in Termux shell:
